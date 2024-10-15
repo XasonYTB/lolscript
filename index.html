@@ -8,31 +8,32 @@
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to the Official Roblox LolScript Website</h1>
-        <p>Find the best Roblox exploiting scripts for your favorite games</p>
-        <div class="script-list">
-            <button class="script-button" onclick="showScript('Script 1')">
-                <img src="script1.png" alt="Script 1">
+        <h1 class="welcome-text">Welcome to the Official Roblox LolScript Website</h1>
+        <p class="subtitle">Find the best Roblox exploiting scripts for your favorite games!</p>
+
+        <div class="script-buttons">
+            <button class="script-button" onclick="showScript('script1')">
+                <img src="https://via.placeholder.com/100" alt="Script 1">
                 <span>Script 1</span>
             </button>
-            <button class="script-button" onclick="showScript('Script 2')">
-                <img src="script2.png" alt="Script 2">
+            <button class="script-button" onclick="showScript('script2')">
+                <img src="https://via.placeholder.com/100" alt="Script 2">
                 <span>Script 2</span>
             </button>
-            <button class="script-button" onclick="showScript('Script 3')">
-                <img src="script3.png" alt="Script 3">
+            <button class="script-button" onclick="showScript('script3')">
+                <img src="https://via.placeholder.com/100" alt="Script 3">
                 <span>Script 3</span>
             </button>
-            <!-- Add more scripts as needed -->
         </div>
-        <div id="script-display" class="hidden">
-            <h2>Your Script:</h2>
+
+        <div id="script-display" class="script-display">
+            <h2>Copy this Script:</h2>
             <pre id="script-content"></pre>
-            <button onclick="resetDisplay()">Go Back</button>
+            <button onclick="resetPage()">Go Back</button>
         </div>
     </div>
-    <script src="script.js"></script>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
-
 
