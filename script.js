@@ -1,17 +1,20 @@
 const scripts = {
-    "Script 1": "print('This is Script 1')",
-    "Script 2": "print('This is Script 2')",
-    "Script 3": "print('This is Script 3')"
+    script1: 'loadstring(game:HttpGet("https://example.com/script1.lua"))()',
+    script2: 'loadstring(game:HttpGet("https://example.com/script2.lua"))()',
+    script3: 'loadstring(game:HttpGet("https://example.com/script3.lua"))()',
 };
 
 function showScript(scriptName) {
-    const scriptContent = scripts[scriptName];
-    document.querySelector('.container').classList.add('hidden');
-    document.getElementById('script-display').classList.remove('hidden');
-    document.getElementById('script-content').textContent = scriptContent;
+    document.querySelector('.welcome-text').style.display = 'none';
+    document.querySelector('.subtitle').style.display = 'none';
+    document.querySelector('.script-buttons').style.display = 'none';
+    document.getElementById('script-display').style.display = 'block';
+    document.getElementById('script-content').textContent = scripts[scriptName];
 }
 
-function resetDisplay() {
-    document.getElementById('script-display').classList.add('hidden');
-    document.querySelector('.container').classList.remove('hidden');
+function resetPage() {
+    document.querySelector('.welcome-text').style.display = 'block';
+    document.querySelector('.subtitle').style.display = 'block';
+    document.querySelector('.script-buttons').style.display = 'flex';
+    document.getElementById('script-display').style.display = 'none';
 }
