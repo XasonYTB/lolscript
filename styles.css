@@ -1,68 +1,62 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #0b0c24; /* Dark space background */
-    color: white;
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
     text-align: center;
-    margin: 0;
-    padding: 0;
+    overflow: hidden;
 }
 
 .container {
-    padding: 50px;
+    padding: 20px;
 }
 
-.welcome-text {
+h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    animation: fadeIn 2s ease;
 }
 
-.button-container {
-    margin: 20px 0;
+p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    animation: fadeIn 3s ease;
+}
+
+.script-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .script-button {
-    background-color: rgba(26, 26, 46, 0.9); /* Button color with slight transparency */
+    background-color: #333;
     border: none;
-    color: white;
-    padding: 15px 20px;
+    color: #fff;
+    padding: 15px;
     margin: 10px;
+    border-radius: 8px;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
-    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Initial shadow */
+    transition: transform 0.2s;
 }
 
 .script-button img {
-    margin-right: 10px;
+    width: 50px;
+    height: 50px;
 }
 
 .script-button:hover {
-    background-color: rgba(22, 33, 62, 1); /* Button hover effect */
-    transform: translateY(-2px); /* Slight upward movement */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
+    transform: scale(1.1);
 }
 
-.script-output {
+.hidden {
+    display: none;
+}
+
+#script-display {
     margin-top: 20px;
-    padding: 15px;
-    border: 1px solid white;
-    background-color: rgba(26, 26, 46, 0.9); /* Output box color with transparency */
-    display: none; /* Hidden initially */
-    border-radius: 10px;
 }
 
-.script-output h2 {
-    margin: 0;
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
-
-.script-output pre {
-    background-color: #1a1a2e;
-    padding: 10px;
-    border-radius: 5px;
-    overflow-x: auto; /* Allow horizontal scrolling */
-    white-space: pre-wrap; /* Ensure text wraps */
-}
-
