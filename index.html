@@ -3,30 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Official Roblox LolScript Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Roblox LolScript</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1 class="welcome-text">Welcome to the Official Roblox LolScript Website</h1>
-        <p>Find the best Roblox exploiting scripts for your favorite games.</p>
-        <div class="button-container">
-            <button class="script-button" onclick="showScript('Script 1', 'print(\"Hello World\")')">
-                <img src="https://via.placeholder.com/50" alt="Script 1">
+        <h1>Welcome to the Official Roblox LolScript Website</h1>
+        <p>Find the best Roblox exploiting scripts for your favorite games</p>
+        <div class="script-list">
+            <button class="script-button" onclick="showScript('Script 1')">
+                <img src="script1.png" alt="Script 1">
                 <span>Script 1</span>
             </button>
-            <button class="script-button" onclick="showScript('Script 2', 'game.Players.LocalPlayer:Kick()')">
-                <img src="https://via.placeholder.com/50" alt="Script 2">
+            <button class="script-button" onclick="showScript('Script 2')">
+                <img src="script2.png" alt="Script 2">
                 <span>Script 2</span>
             </button>
-            <button class="script-button" onclick="showScript('Script 3', 'loadstring(game:HttpGet(\"https://example.com/script.lua\"))()')">
-                <img src="https://via.placeholder.com/50" alt="Script 3">
+            <button class="script-button" onclick="showScript('Script 3')">
+                <img src="script3.png" alt="Script 3">
                 <span>Script 3</span>
             </button>
+            <!-- Add more scripts as needed -->
         </div>
-        <div id="script-output" class="script-output"></div>
+        <div id="script-display" class="hidden">
+            <h2>Your Script:</h2>
+            <pre id="script-content"></pre>
+            <button onclick="resetDisplay()">Go Back</button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
 </html>
+
 
